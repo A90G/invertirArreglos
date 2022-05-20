@@ -1,9 +1,17 @@
-import "./styles.css";
+/*Almacene en un arreglo de tamaño N los números ingresados
+por el usuario
+La dimensión N también es ingresada por el usuario
+LO ÚNICO QUE ME FALTA ES QUE Muestre los números del arreglo pero del último al primero
+*/
+let dimensionArreglo: number = Number(
+  prompt(`Ingrese la dimensión del arreglo:`)
+);
+let arreglo: number[] = new Array(dimensionArreglo);
+let indice: number;
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>`;
+for (indice = 0; indice < dimensionArreglo; indice++) {
+  arreglo[indice] = Number(
+    prompt(`Indique el nro que va en la posición ${indice}:`)
+  );
+  console.log(`El número en la posición ${indice} es: ${arreglo[indice]}`);
+}
